@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt gunicorn nginx
+RUN pip install --no-cache-dir -r requirements.txt gunicorn
 
 # Copy app code
 COPY . .
