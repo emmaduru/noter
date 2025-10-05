@@ -149,7 +149,7 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATIC_HOST = "https://res.cloudinary.com/emmavd/image/upload/v1759680600/noter/" if not DEBUG else ""
+STATIC_HOST = os.getenv("STATIC_HOST") if not DEBUG else ""
 
 STATIC_URL = STATIC_HOST + 'static/'
 
